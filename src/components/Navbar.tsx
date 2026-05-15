@@ -2,9 +2,10 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ShoppingCart, Menu, X, Globe } from "lucide-react";
+import { ShoppingCart, Menu, X} from "lucide-react";
 import { useState } from "react";
 import { useCart } from "@/context/CartContext";
+import  Image  from "next/image";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
@@ -23,13 +24,8 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <div className="bg-green-700 text-white p-1.5 rounded-md">
-              <Globe size={20} />
-            </div>
-            <span className="text-xl font-bold text-gray-900">
-              Tijarah <span className="text-green-700">Global</span>
-            </span>
+          <Link href="/" className="flex items-center">                                                                                                           
+            <Image src="/TijarahLogo.png" alt="Tijarah Global" height={100} width={65} />                                                                       
           </Link>
 
           {/* Desktop Nav */}

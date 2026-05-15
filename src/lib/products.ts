@@ -14,10 +14,10 @@ export const categories = ["All", "Chips & Snacks", "Baby Products", "Beverages"
 export const products: Product[] = [
   {
     id: "1",
-    name: "Classic Potato Chips",
+    name: "Bic Pen",
     price: 2.99,
-    image: "https://images.unsplash.com/photo-1566478989037-eec170784d0b?w=400&h=400&fit=crop",
-    category: "Chips & Snacks",
+    image: "",
+    category: "Office Equipment",
     description: "Crispy, golden potato chips made from the finest potatoes. Perfect for any occasion.",
     stock: 50,
     badge: "Best Seller",

@@ -3,40 +3,6 @@ import { ArrowRight, Truck, ShieldCheck, Star, RotateCcw } from "lucide-react";
 import { getFeaturedProducts } from "@/lib/products";
 import ProductCard from "@/components/ProductCard";
 
-const categories = [
-  {
-    name: "Chips & Snacks",
-    emoji: "🍿",
-    bg: "bg-amber-50",
-    border: "border-amber-200",
-    hover: "hover:border-amber-400",
-    text: "text-amber-700",
-  },
-  {
-    name: "Baby Products",
-    emoji: "🍼",
-    bg: "bg-pink-50",
-    border: "border-pink-200",
-    hover: "hover:border-pink-400",
-    text: "text-pink-700",
-  },
-  {
-    name: "Beverages",
-    emoji: "🧃",
-    bg: "bg-blue-50",
-    border: "border-blue-200",
-    hover: "hover:border-blue-400",
-    text: "text-blue-700",
-  },
-  {
-    name: "Household",
-    emoji: "🏠",
-    bg: "bg-green-50",
-    border: "border-green-200",
-    hover: "hover:border-green-400",
-    text: "text-green-700",
-  },
-];
 
 const valueProps = [
   { icon: Truck, label: "Fast Delivery", desc: "Quick shipping to your door" },
@@ -58,15 +24,12 @@ export default function Home() {
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
           <div className="max-w-2xl">
-            <span className="inline-block bg-white/15 text-white text-sm font-medium px-3 py-1 rounded-full mb-6">
-              Free delivery on orders over $30
-            </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight">
               Quality Essentials,{" "}
               <span className="text-green-200">Delivered to Your Door</span>
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-green-100 leading-relaxed max-w-xl">
-              From snacks and beverages to baby products and household goods —
+              From everyday needs as an adult to baby products and household goods —
               everything your family needs in one place.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-4">
@@ -88,32 +51,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Categories */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="flex items-center justify-between mb-8">
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">Shop by Category</h2>
-          <Link
-            href="/products"
-            className="text-sm font-medium text-green-700 hover:text-green-800 flex items-center gap-1 transition-colors"
-          >
-            View all <ArrowRight size={14} />
-          </Link>
-        </div>
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-          {categories.map((cat) => (
-            <Link
-              key={cat.name}
-              href={`/products?category=${encodeURIComponent(cat.name)}`}
-              className={`group flex flex-col items-center gap-3 p-6 rounded-2xl border-2 ${cat.bg} ${cat.border} ${cat.hover} transition-all duration-200 hover:shadow-md`}
-            >
-              <span className="text-4xl">{cat.emoji}</span>
-              <span className={`text-sm font-semibold text-center ${cat.text}`}>
-                {cat.name}
-              </span>
-            </Link>
-          ))}
-        </div>
-      </section>
 
       {/* Featured / Best Sellers */}
       <section className="bg-gray-50 py-16">
@@ -121,7 +58,6 @@ export default function Home() {
           <div className="flex items-center justify-between mb-8">
             <div>
               <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">Best Sellers</h2>
-              <p className="text-gray-500 mt-1 text-sm">Our most popular products</p>
             </div>
             <Link
               href="/products"
